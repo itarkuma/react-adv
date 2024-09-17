@@ -12,7 +12,7 @@ import { Suspense } from 'react';
 
 export const Navigation = () => {
   return (
-    <Suspense fallback={ <span>Loading...</span> } >
+    <Suspense fallback={ <span>Loading... </span> } >
       <Router>
         <div className="main-layout">
           <nav>
@@ -22,7 +22,7 @@ export const Navigation = () => {
                 routes.map( ( { path, name } ) => {
                   return (
                     <li key={ path }>
-                      <NavLink to={ path } activeClassName="nav-active" exact>
+                      <NavLink to={ path } activeClassName="nav-active">
                         { name }
                       </NavLink>
                     </li>
